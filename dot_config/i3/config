@@ -181,11 +181,11 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+s restart
 
 # manage i3 session
-bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -f "pango:Hack 9" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock -I 600 -i ~/config/i3/pictures/wallpapers/lock/lock.png" -B "    Reboot " "pkill i3-nagbar && reboot" -B "    Shutdown " "pkill i3-nagbar && shutdown -h now"
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -f "pango:Hack 9" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock -I 600 -i ~/.wallpapers/lock/lock.png" -B "    Reboot " "pkill i3-nagbar && reboot" -B "    Shutdown " "pkill i3-nagbar && shutdown -h now"
 
 # i3lock
 mode "i3lock: Return to lock/Escape to Cancel" {
-  bindsym Return mode "default" exec "i3lock -I 600 -i ~/config/i3/pictures/wallpapers/lock/lock.png"
+  bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
   bindsym Escape mode "default"
 }
 
@@ -331,6 +331,6 @@ gaps outer 0
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id lxpolkit
-exec --no-startup-id feh --bg-fill ~/config/i3/pictures/wallpapers/wallpaper_1.jpg
+exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
 exec --no-startup-id xcompmgr
 exec --no-startup-id fcitx
