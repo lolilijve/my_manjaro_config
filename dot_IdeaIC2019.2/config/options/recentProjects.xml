@@ -1,0 +1,103 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$" />
+        <option value="$USER_HOME$/IdeaProjects/gov-data" />
+        <option value="$USER_HOME$/IdeaProjects/iep-1" />
+        <option value="$USER_HOME$/IdeaProjects/turtle-cloud" />
+        <option value="$USER_HOME$/IdeaProjects/middle-ware-parent" />
+        <option value="$USER_HOME$/Demo/my-blog" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-192.6262.58" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1569288703414" />
+              <option name="buildTimestamp" value="1566473075793" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Demo/my-blog">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-191.7479.19" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1564126281418" />
+              <option name="buildTimestamp" value="1559127511411" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/gov-data">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-192.6262.58" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1569219032946" />
+              <option name="buildTimestamp" value="1566473054352" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/iep">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-192.6262.58" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1568172257456" />
+              <option name="buildTimestamp" value="1566473087144" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/iep-1">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-192.6262.58" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1569207769508" />
+              <option name="buildTimestamp" value="1566473054352" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/middle-ware-parent">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-192.6262.58" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1568261179913" />
+              <option name="buildTimestamp" value="1566473041501" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/IdeaProjects/turtle-cloud">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-192.6262.58" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1568604235120" />
+              <option name="buildTimestamp" value="1566473095465" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/IdeaProjects" />
+  </component>
+</application>
