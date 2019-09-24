@@ -1,5 +1,10 @@
 <application>
   <component name="com.intellij.ide.ui.customization.CustomActionsSchema">
+    <group value="Github.Open.In.Browser" is_group="true" action_type="-1" position="49">
+      <path value="root" />
+      <path value="Project View Popup Menu" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
     <group value="SynchronizeCurrentFile" is_action="true" action_type="-1" position="28">
       <path value="root" />
       <path value="Project View Popup Menu" />
@@ -75,14 +80,14 @@
       <path value="Editor Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group seperator="true" action_type="-1" position="5">
-      <path value="root" />
-      <path value="Project View Popup Menu" />
-      <option name="myInitialPosition" value="-1" />
-    </group>
     <group value="CopyAsPlainText" is_action="true" action_type="-1" position="4">
       <path value="root" />
       <path value="Editor Popup Menu" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="RestoreDefaultExtensionScripts" is_action="true" action_type="-1" position="4">
+      <path value="root" />
+      <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
     <group value="$Copy" is_action="true" action_type="-1" position="3">
@@ -116,13 +121,6 @@
       <path value="Editor Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="Git.RepositoryContextMenu" is_group="true" action_type="-1" position="2">
-      <path value="root" />
-      <path value="Project View Popup Menu" />
-      <path value="VCS/LVCS Actions" />
-      <path value="Version Control Group" />
-      <option name="myInitialPosition" value="-1" />
-    </group>
     <group seperator="true" action_type="-1" position="2">
       <path value="root" />
       <path value="Project View Popup Menu" />
@@ -136,20 +134,6 @@
       <path value="Project View Popup Menu" />
       <path value="Project View Popup Menu Run Group" />
       <path value="Run Configurations" />
-      <option name="myInitialPosition" value="-1" />
-    </group>
-    <group seperator="true" action_type="-1" position="1">
-      <path value="root" />
-      <path value="Project View Popup Menu" />
-      <path value="VCS/LVCS Actions" />
-      <path value="Version Control Group" />
-      <option name="myInitialPosition" value="-1" />
-    </group>
-    <group value="GitFileActions" is_group="true" action_type="-1" position="0">
-      <path value="root" />
-      <path value="Project View Popup Menu" />
-      <path value="VCS/LVCS Actions" />
-      <path value="Version Control Group" />
       <option name="myInitialPosition" value="-1" />
     </group>
     <group value="OpenInBrowserGroup" is_group="true" action_type="1" position="2">
@@ -177,32 +161,42 @@
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="VersionControlsGroup" is_group="true" action_type="1" position="5">
+    <group value="Git.ContextMenu" is_group="true" action_type="1" position="5">
       <path value="root" />
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="Maven.GlobalProjectMenu" is_group="true" action_type="1" position="6">
+    <group value="LocalHistory" is_group="true" action_type="1" position="6">
       <path value="root" />
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="ProjectViewPopupMenuRunGroup" is_group="true" action_type="1" position="7">
+    <group value="Maven.GlobalProjectMenu" is_group="true" action_type="1" position="7">
       <path value="root" />
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group seperator="true" action_type="1" position="8">
+    <group value="ProjectViewPopupMenuRunGroup" is_group="true" action_type="1" position="8">
       <path value="root" />
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="SynchronizeCurrentFile" is_action="true" action_type="1" position="9">
+    <group value="SynchronizeCurrentFile" is_action="true" action_type="1" position="10">
       <path value="root" />
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
     </group>
-    <group value="AssociateWithFileType" is_action="true" action_type="1" position="11">
+    <group value="RestoreDefaultExtensionScripts" is_action="true" action_type="1" position="11">
+      <path value="root" />
+      <path value="Project View Popup Menu" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="AssociateWithFileType" is_action="true" action_type="1" position="12">
+      <path value="root" />
+      <path value="Project View Popup Menu" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="Github.Open.In.Browser" is_group="true" action_type="1" position="47">
       <path value="root" />
       <path value="Project View Popup Menu" />
       <option name="myInitialPosition" value="-1" />
