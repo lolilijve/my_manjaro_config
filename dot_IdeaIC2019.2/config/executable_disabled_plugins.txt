@@ -1,3 +1,4 @@
 AntSupport
 CheckStyle-IDEA
+IdeaVIM
 org.jetbrains.android

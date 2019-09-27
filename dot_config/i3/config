@@ -1,23 +1,16 @@
-# Oxide theme
-#
-# Author: Diki Ananta <diki1aap@gmail.com>
-# Repository: https://github.com/dikiaap/dotfiles
-# License: MIT
-# i3 config file (v4)
-
-# font for window titles and bar
+# 字体
 font pango:Source Sans Pro 10
 
-# use win key
+# 设置默认的mod键(mod4是win键，mod1是alt键）
 set $mod Mod4
 
-# use these keys for focus, movement, and resize directions
+# 设置方向键，此处设置和vim相同
 set $left   h
 set $down   j
 set $up     k
 set $right  l
 
-# define names for workspaces
+# 定义各窗口的名称
 set $ws1    "1.   Terminal "
 set $ws2    "2.   Code "
 set $ws3    "3.   Chromium "
@@ -29,109 +22,106 @@ set $ws8    "8.   Chat "
 set $ws9    "9.   General "
 set $ws10   "10.   Settings "
 
-# use $mod+Mouse to drag floating windows to their wanted position
-floating_modifier $mod
+# 使用$ mod + Mouse 将浮动窗口拖动到所需位置
+floating_modifier   $mod
 
-# control focused window when follows the mouse movements
+# 焦点窗口是否跟随鼠标
 focus_follows_mouse no
 
-# window border settings
+# 窗口边界设置
 default_border          none
 default_floating_border none
 
-# hiding borders adjacent to the screen edges
-hide_edge_borders none
+# 隐藏边框
+hide_edge_borders   none
 
-# set popups during fullscreen mode
+# 全屏模式下弹出窗口
 popup_during_fullscreen smart
 
-# start a terminal
+# 打开终端
 bindsym $mod+Return workspace $ws1; exec --no-startup-id alacritty
 
-# start a program launcher
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Source Sans Pro-10' -nb '#212121' -sb '#2b83a6' -sf '#ffffff'"
+# 打开程序启动软件（rofi不错）
 bindsym mod1+space exec --no-startup-id rofi -show drun
 
-# switching window with win+tab
+# 使用rofi切换窗口
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
-# kill focused window
+# 关闭当前窗口
 bindsym mod1+F4 kill
 
-# change focus
+# 切换选中窗口
 bindsym $mod+$left  focus left
 bindsym $mod+$down  focus down
 bindsym $mod+$up    focus up
 bindsym $mod+$right focus right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left   focus left
 bindsym $mod+Down   focus down
 bindsym $mod+Up     focus up
 bindsym $mod+Right  focus right
 
-# move focused window
+# 移动选中窗口到其他位置
 bindsym $mod+Shift+$left    move left
 bindsym $mod+Shift+$down    move down
 bindsym $mod+Shift+$up      move up
 bindsym $mod+Shift+$right   move right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left     move left
 bindsym $mod+Shift+Down     move down
 bindsym $mod+Shift+Up       move up
 bindsym $mod+Shift+Right    move right
 
-# split in horizontal orientation
+# 横向切分
 bindsym $mod+mod1+h split h
 
-# split in vertical orientation
+# 纵向切分
 bindsym $mod+mod1+v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# 切换全屏模式
+bindsym $mod+f  fullscreen toggle
 
-# change container layout
+# 切换窗口堆叠模式
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# 切换浮动显示
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# 在浮动窗口和非浮动窗口间切换焦点
 bindsym $mod+mod1+space focus mode_toggle
 
-# focus the parent container
+# 焦点到父容器
 bindsym $mod+a focus parent
 
-# focus the child container
+# 焦点到子容器
 bindsym $mod+Shift+a focus child
 
-# move the currently focused window to the scratchpad
+# 收起当前窗口到暂存器
 bindsym $mod+minus move scratchpad
 
-# show the next scratchpad window or hide the focused scratchpad window
+# 显示下一个暂存器窗口或隐藏焦点暂存器窗口
 bindsym $mod+plus scratchpad show
 
-# move focused floating window to the center of all outputs
+# 移动选中的浮动窗口（并没有什么用，完全可以使用$mod+鼠标拖动完成）
+# 移动选中的浮动窗口到中心位置
 # bindsym $mod+Shift+y move absolute position center
+# 移动选中的浮动窗口到
+# bindsym $mod+Shift+m move position mouse
 
-# move focused floating window to the current position of the cursor
-bindsym $mod+Shift+m move position mouse
+# 将焦点窗口固定在屏幕上
+bindsym $mod+Shift+d sticky toggle
 
-# set a window to stick to the glass
-# bindsym $mod+Shift+s sticky toggle
+# 媒体预览
+# bindsym $mod+Shift+m fullscreen disable; floating enable; resize set 350 px 197 px; sticky enable; move window to position 1006 px 537 px
 
-# sticky preview for media
-# bindsym $mod+Shift+p fullscreen disable; floating enable; resize set 350 px 197 px; sticky enable; move window to position 1006 px 537 px
-
-# shortcut to change window border
-bindsym $mod+t border normal    0
+# 更改窗口边框的快捷方式（能用来辨别是否是全屏模式，其他的用处暂未发现）
+# bindsym $mod+t border normal    0
 bindsym $mod+y border pixel     1
 bindsym $mod+u border none
 
-# switch to workspace
+# 通过数字选中跳转工作区
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -143,7 +133,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# move focused container to workspace
+# 移动焦点窗口到指定工作区
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -155,7 +145,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# shortcut applications
+# 打开应用的快捷键（更喜欢用rofi）
 bindsym $mod+F1                 exec gkamus
 bindsym $mod+F2 workspace $ws2; exec subl
 bindsym $mod+F3 workspace $ws3; exec chromium-browser
@@ -167,31 +157,29 @@ bindsym $mod+F8 workspace $ws8; exec telegram
 bindsym $mod+F9 workspace $ws9; exec go-for-it
 bindsym Print                   exec --no-startup-id gnome-screenshot
 bindsym $mod+Print              exec --no-startup-id gnome-screenshot -a
-bindsym $mod+Shift+x            exec --no-startup-id i3lock-fancy -f Source-Sans-Pro
 
-# volume
+# 音量
 bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
 
-# reload the configuration file
+# 重新加载配置文件
 bindsym $mod+Shift+r reload
 
-# restart i3 inplace
+# 重启i3
 bindsym $mod+Shift+s restart
 
-# manage i3 session
-bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -f "pango:Hack 9" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock -I 600 -i ~/.wallpapers/lock/lock.png" -B "    Reboot " "pkill i3-nagbar && reboot" -B "    Shutdown " "pkill i3-nagbar && shutdown -h now"
-
-# i3lock
+# 锁屏
 mode "i3lock: Return to lock/Escape to Cancel" {
-  bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
-  bindsym Escape mode "default"
+    bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
+    bindsym Escape mode "default"
 }
-
 bindsym $mod+mod1+l mode "i3lock: Return to lock/Escape to Cancel"
 
-#===power manager===
+# 管理会话
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -f "pango:Hack 9" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock -I 600 -i ~/.wallpapers/lock/lock.png" -B "    Reboot " "pkill i3-nagbar && reboot" -B "    Shutdown " "pkill i3-nagbar && shutdown -h now"
+
+# 和上面的差不多
 set $mode_system select: lock(L) exit(E) reboot(R) poweroff(O) cancel(Esc)
 bindsym $mod+Shift+q mode "$mode_system"
 mode "$mode_system" {
@@ -202,35 +190,33 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# resize window
+# 调整窗口大小
 bindsym $mod+r mode "  "
 mode "  " {
-    # pressing left and up will shrink the window's width and height
-    # pressing right and down will grow the window's width and height
+    # 上下左右调整窗口大小
     bindsym $left   resize shrink width 10 px or 10 ppt
     bindsym $down   resize grow height 10 px or 10 ppt
     bindsym $up     resize shrink height 10 px or 10 ppt
     bindsym $right  resize grow width 10 px or 10 ppt
 
-    # same bindings, but for the arrow keys
     bindsym Left    resize shrink width 10 px or 10 ppt
     bindsym Down    resize grow height 10 px or 10 ppt
     bindsym Up      resize shrink height 10 px or 10 ppt
     bindsym Right   resize grow width 10 px or 10 ppt
 
-    # back to normal
+    # 退出调整模式
     bindsym Escape mode "default"
     bindsym Return mode "default"
     bindsym $mod+r mode "default"
 }
 
-# tray icons(eDP1 is the display device's name, use the command "xrandr" to see the display device name.)
-# exec --no-startup-id xrandr --output eDP1 --primary
-
-# external display device(eDP1 is the display device's name, use the command "xrandr" to see the display device name.)
+exec --no-startup-id xrandr --output eDP1 --primary
+# 调整双屏幕显示(用命令"xrandr"可查看显示器名称)
 bindsym $mod+Shift+p exec --no-startup-id "xrandr --output HDMI2 --auto --right-of eDP1"
+# 将焦点所在工作区移至右侧显示器
+bindsym $mod+p move workspace to output right
 
-# set specific windows to floating mode
+# 设置指定窗口以浮动的形式打开
 for_window [window_role="app"]                      floating enable
 for_window [window_role="pop-up"]                   floating enable
 for_window [window_role="task_dialog"]              floating enable
@@ -247,7 +233,7 @@ for_window [class="Menu"]                           floating enable
 for_window [class="Nm-connection-editor"]           floating enable
 for_window [class="Software-properties-gtk"]        floating enable
 
-# assign program to workspace
+# 指定应用默认在哪个工作区打开
 assign [class="Alacritty"]          → $ws1
 assign [class="terminal"]           → $ws1
 assign [class="idea"]               → $ws2
@@ -298,20 +284,26 @@ client.background       #212121
 
 # start i3bar to display a workspace bar
 bar {
-    status_command          i3blocks
-    bindsym button4         nop
-    bindsym button5         nop
+    # 状态栏的打开形式
+    status_command          py3status -c ~/.config/i3/i3status.conf
+    # 位置
     position                bottom
-    tray_output             primary
-    separator_symbol        "·"
+    # 显示任务栏图标(primary：主屏，no：不显示)
+    tray_output             no
+    # 分隔符
+    separator_symbol        "  "
+    # 工作区按钮
     workspace_buttons       yes
+    # 是否隐藏工作区上的数字
     strip_workspace_numbers no
-    mode hide
+    # 状态栏显示形式（hide为隐藏，按下mod键显示）
+    mode                    hide
 
+    # 色彩搭配
     colors {
-        background  #212121
-        statusline  #dddddd
-        separator   #666666
+        background          #212121
+        statusline          #dddddd
+        separator           #777777
         # class             border  backgr. text
         focused_workspace   #2b83a6 #2b83a6 #ffffff
         active_workspace    #212121 #212121 #ffffff
@@ -323,14 +315,25 @@ bar {
 
 # i3-gaps
 smart_gaps on
+# 边框
 gaps inner 8
 gaps outer 0
 
-# startup applications
-# exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -f Source-Sans-Pro"
-exec --no-startup-id nm-applet
-exec --no-startup-id pulseaudio --start
-exec --no-startup-id lxpolkit
+# 开机启动项
+# 设置自动锁屏（用处不大）
+# exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
+# 设置背景
 exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
+# 启动网络管理
+exec --no-startup-id nm-applet
+# 启动音频服务
+exec --no-startup-id pulseaudio --start
+# 启动透明度
 exec --no-startup-id xcompmgr
+# 启动中文输入法
 exec --no-startup-id fcitx
+# 启动电源管理
+exec --no-startup-id xfce4-power-manager
+# 设置开机欢迎词
+exec --no-startup-id notify-send "Welcome back Andrea!" -i ~/.wallpapers/MorningFog.jpg
+
