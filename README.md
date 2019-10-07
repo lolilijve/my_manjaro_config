@@ -1,7 +1,9 @@
 # my_manjaro_config
+
 我的manjaro配置文件,本配置文件项目由`chezmoi`提交；
 
 ## 另附上manjaro安装配置过程：
+
 ### 更换国内源
 
 ```shell
@@ -78,24 +80,31 @@ sudo pacman -S fcitx fcitx-im fcitx-configtool
 |    ×     |              uget               |     下载工具      |           说真的，我还是觉得迅雷好用，是我的错觉吗           |          ❤           |
 |    ×     |             dbeaver             | 数据库可视化界面  |                 偶尔卡死，原因未知，有点吃藕                 |          ❤           |
 
+> 注：以上选装
+
 > ps：为什么有六星选项？	因为我玩`克鲁赛德战记`啊，请叫我`肝多夫`
 
-| 当前安装 | 应用名（i3wm中使用）  |          功能           |          说明          |
-| :------: | :-------------------: | :---------------------: | :--------------------: |
-|    √     |    xrog-xbacklight    |      调节屏幕亮度       |           --           |
-|    √     |  mate-power-manager   |        电池管理         |  用于挂起，熄屏什么的  |
-|    √     |       py3status       |      i3status拓展       |  就是美化i3wm状态栏的  |
-|    √     |        pydbus         |     Python的dbus库      |    py3status中使用     |
-|    √     |      alsa-utils       | Linux声音支持的替代实现 |           --           |
-|    √     | deepin-system-monitor |       任务管理器        | 深度的东西还是挺漂亮的 |
+| 是否推荐安装 | 应用名（i3wm中使用）  |          功能           |                             说明                             |
+| :----------: | :-------------------: | :---------------------: | :----------------------------------------------------------: |
+|      √       |    xorg-xbacklight    |      调节屏幕亮度       |                              --                              |
+|      √       |  mate-power-manager   |        电池管理         |                     用于挂起，熄屏什么的                     |
+|      √       |       py3status       |      i3status拓展       |                     就是美化i3wm状态栏的                     |
+|      √       |        pydbus         |     Python的dbus库      |                       py3status中使用                        |
+|      √       |      alsa-utils       | Linux声音支持的替代实现 |                              --                              |
+|      √       | deepin-system-monitor |       任务管理器        |                    深度的东西还是挺漂亮的                    |
+|      √       | networkmanager_dmenu  |        wifi管理         |                          能记住密码                          |
+|      √       |         rofi          |       应用运行器        |                             很棒                             |
+|      √       |       alacritty       |          终端           |                    我在配置文件里写的这个                    |
+|      √       |  nerd-fonts-complete  | 字体（含多种字符图标）  | 本人使用`https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack` |
 
+> 注：以上个人推荐，与本配置相关
 
 ### 获取配置文件
 
-1. clone项目
+1. 创建chezmoi目录并clone配置文件项目
 
-   ```shell 
-   git clone git@github.com:lolilijve/my_manjaro_config.git ~/.local/share/chezmoi
+   ```shell
+   chezmoi init https://github.com/lolilijve/my_manjaro_config.git
    ```
 
 2. 与当前使用的配置文件比较
@@ -118,5 +127,6 @@ sudo pacman -S fcitx fcitx-im fcitx-configtool
 
    > 注意：
    >
-   > 1. 部分配置当即生效，部分需重启，视软件而定
-   > 2. 千万不要轻易使用`chezmoi update`，此操作相当于拉取线上配置并直接覆盖当前使用的配置
+   > 1. 需要安装`chezmoi`
+   > 2. 部分配置当即生效，部分需重启，视软件而定
+   > 3. 千万不要轻易使用`chezmoi update`，此操作相当于拉取线上配置并直接覆盖当前使用的配置

@@ -300,6 +300,8 @@ gaps outer 0
 # 开机启动项
 # 设置自动锁屏（用处不大）
 # exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
+# 启动电源管理
+exec --no-startup-id mate-power-manager
 # 设置背景
 exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
 # 启动网络管理
@@ -310,6 +312,4 @@ exec --no-startup-id pulseaudio --start
 exec --no-startup-id xcompmgr
 # 启动中文输入法
 exec --no-startup-id fcitx
-# 启动电源管理
-exec --no-startup-id mate-power-manager
 
