@@ -59,7 +59,7 @@ sudo pacman -S fcitx fcitx-im fcitx-configtool
 |    √     |           vim/neovim            |    文本编辑器     |         据说vim号称编辑器之神；装上spacevim更优秀；          |        ❤❤❤❤❤         |
 |    √     |            alacritty            |    终端模拟器     |         GPU加速，我倒是没多少感觉，可能我的GPU太烂了         |        ❤❤❤❤❤         |
 |    √     |              fish               |       shell       | 配置`fish_config`，设置为默认shell`sudo chsh -s (which fish)`; |        ❤❤❤❤❤         |
-|    √     |           oh-my-fish            |    fish拓展包     |        安装：`curl -L https://get.oh-my.fish | fish`         |        ❤❤❤❤❤         |
+|    √     |           oh-my-fish            |    fish拓展包     |        安装：`curl -L https://get.oh-my.fish \| fish`        |        ❤❤❤❤❤         |
 |    √     |              redis              | 键值对存储数据库  |                            常用到                            |        ❤❤❤❤❤         |
 |    √     |             docker              |   就是docker咯    |                     装得下，世界就是你的                     |        ❤❤❤❤❤         |
 |    √     |             chezmoi             |   点文件git管理   |               妈妈再也不用担心我的配置文件丢了               |         ❤❤❤❤         |

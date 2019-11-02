@@ -39,6 +39,10 @@
   <action id="Arrangement.Rule.Match.Condition.Move.Down" />
   <action id="Arrangement.Rule.Match.Condition.Move.Up" />
   <action id="AutoIndentLines" />
+  <action id="Back">
+    <mouse-shortcut keystroke="button4" />
+    <keyboard-shortcut first-keystroke="alt left" />
+  </action>
   <action id="ChoosePrevSubsequentPropertyValueEditorAction" />
   <action id="ClassNameCompletion" />
   <action id="CodeCompletion">
@@ -47,6 +51,8 @@
   </action>
   <action id="CompareTwoFiles" />
   <action id="CopyElement" />
+  <action id="Diff.NextChange" />
+  <action id="Diff.PrevChange" />
   <action id="Diff.ShowDiff" />
   <action id="Editor Redo">
     <keyboard-shortcut first-keystroke="ctrl y" />
@@ -69,6 +75,10 @@
   <action id="ForceStepOver">
     <keyboard-shortcut first-keystroke="shift alt f6" />
   </action>
+  <action id="Forward">
+    <mouse-shortcut keystroke="button5" />
+    <keyboard-shortcut first-keystroke="alt right" />
+  </action>
   <action id="GotoNextError" />
   <action id="GotoPreviousError" />
   <action id="GuiDesigner.EditComponent" />
@@ -88,10 +98,12 @@
     <keyboard-shortcut first-keystroke="alt up" />
   </action>
   <action id="NextOccurence" />
+  <action id="NextTab" />
   <action id="PasteMultiple">
     <keyboard-shortcut first-keystroke="shift ctrl v" />
   </action>
   <action id="PreviousOccurence" />
+  <action id="PreviousTab" />
   <action id="QuickEvaluateExpression">
     <mouse-shortcut keystroke="alt button1" />
     <keyboard-shortcut first-keystroke="shift ctrl i" />
