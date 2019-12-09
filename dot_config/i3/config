@@ -12,7 +12,7 @@ set $right  l
 
 # 定义各窗口的名称
 set $ws1    "1.   Terminal "
-set $ws2    "2.   IDEA "
+set $ws2    "2.   Program "
 set $ws3    "3.   Chromium "
 set $ws4    "4.   Files "
 set $ws5    "5.   Documents "
@@ -159,9 +159,8 @@ bindsym Print                   exec --no-startup-id gnome-screenshot
 bindsym $mod+Print              exec --no-startup-id gnome-screenshot -a
 
 # 音量
-bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
-bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
-bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
+bindsym $mod+mod1+Up    exec --no-startup-id amixer sset Master 5%+
+bindsym $mod+mod1+Down  exec --no-startup-id amixer sset Master 5%-
 
 # 重新加载配置文件
 bindsym $mod+Shift+r reload
@@ -225,12 +224,14 @@ for_window [class="rofi"]                           floating enable
 for_window [class="Lxappearance"]                   floating enable
 for_window [class="Menu"]                           floating enable
 for_window [class="Nm-connection-editor"]           floating enable
+for_window [class="netease-cloud-music"]            floating enable
 
 # 指定应用默认在哪个工作区打开
 assign [class="Alacritty"]              → $ws1
 assign [class="terminal"]               → $ws1
 assign [class="urxvt"]                  → $ws1
 assign [class="idea"]                   → $ws2
+assign [class="pycharm"]                → $ws2
 assign [class="Chromium"]               → $ws3
 assign [class="Firefox"]                → $ws3
 assign [class="Chrome"]                 → $ws3
@@ -267,7 +268,7 @@ bar {
     # 位置
     position                    bottom
     # 显示任务栏图标(primary：主屏，no：不显示)
-    tray_output                 no
+    tray_output                 primary
     # 分隔符
     separator_symbol            "  "
     # 工作区按钮
@@ -294,8 +295,8 @@ bar {
 # i3-gaps
 smart_gaps on
 # 边框
-gaps inner 8
-gaps outer 0
+gaps inner 7
+gaps outer 1
 
 # 开机启动项
 # 设置自动锁屏（用处不大）
@@ -303,7 +304,8 @@ gaps outer 0
 # 启动电源管理
 exec --no-startup-id mate-power-manager
 # 设置背景
-exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
+# exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
+exec --no-startup-id feh --bg-fill ~/图片/壁纸/wallpaper_1206_1.jpg
 # 启动网络管理
 exec --no-startup-id nm-applet
 # 启动音频服务
