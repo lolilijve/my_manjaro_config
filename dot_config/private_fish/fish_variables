@@ -3,7 +3,7 @@
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR fish_color_autosuggestion:64DF85
 SETUVAR fish_color_cancel:\x2dr
-SETUVAR fish_color_command:00BF32
+SETUVAR fish_color_command:ACF53D
 SETUVAR fish_color_comment:5C9900
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
@@ -29,4 +29,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:~/\x2ecache/vim/dein/repos/github\x2ecom/junegunn/fzf/bin
+SETUVAR fish_user_paths:\x7e/\x2ecache/vim/dein/repos/github\x2ecom/junegunn/fzf/bin
