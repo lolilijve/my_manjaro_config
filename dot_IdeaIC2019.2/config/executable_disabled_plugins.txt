@@ -1,3 +1,0 @@
-AntSupport
-CheckStyle-IDEA
-org.jetbrains.android

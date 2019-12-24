@@ -34,7 +34,8 @@ sudo pacman -S yay
 ### 中文输入法
 
 ```shell
-sudo pacman -S ibus-rime ibus-qt
+sudo pacman -S ibus-rime
+yay -S ibus-qt
 ```
 
 > 执行`qtconfig-qt4`，在 **Interface** -> **Default Input Method**，把默认的输入法引擎由 **xim** 更改为 **ibus**
@@ -109,7 +110,7 @@ sudo pacman -S ibus-rime ibus-qt
 
 4. 若确认无误可使用项目中的配置文件覆盖当前配置
 
-   ```shell
+   ```shellz
    chezmoi apply
    ```
 
