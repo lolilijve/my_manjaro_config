@@ -42,7 +42,9 @@ popup_during_fullscreen smart
 bindsym $mod+Return workspace $ws1; exec --no-startup-id alacritty
 
 # 打开程序启动软件（rofi不错）
-bindsym mod1+space exec --no-startup-id rofi -show drun
+# bindsym mod1+space exec --no-startup-id rofi -show drun
+# 打开utools
+bindsym mod1+space exec --no-startup-id utools
 
 # 使用rofi切换窗口
 bindsym $mod+Tab exec --no-startup-id rofi -show window
@@ -207,9 +209,9 @@ mode "  " {
 
 exec --no-startup-id xrandr --output eDP1 --primary --mode 1600x900
 # 调整双屏幕显示(用命令"xrandr"可查看显示器名称)
-bindsym $mod+Shift+p exec --no-startup-id "xrandr --output HDMI2 --auto --right-of eDP1"
-# 将焦点所在工作区移至右侧显示器
-bindsym $mod+p move workspace to output right
+bindsym $mod+Shift+p exec --no-startup-id "xrandr --output HDMI2 --auto --left-of eDP1"
+# 将焦点所在工作区移至(左/右)侧显示器
+bindsym $mod+p move workspace to output left
 
 # 设置指定窗口以浮动的形式打开
 for_window [window_role="app"]                      floating enable
@@ -233,12 +235,14 @@ assign [class="Firefox"]                → $ws3
 assign [class="Chrome"]                 → $ws3
 assign [class="xarchiver"]              → $ws4
 assign [class="dolphin"]                → $ws4
-assign [class="pcmanfm"]                → $ws4
+assign [class="Pcmanfm"]                → $ws4
 assign [class="Typora"]                 → $ws5
 assign [class="Code"]                   → $ws5
 assign [class="DBeaver"]                → $ws6
+assign [class="MySQL Workbench"]    	→ $ws6
 assign [class="mycli"]                  → $ws6
 assign [class="Qq"]                     → $ws7
+assign [class="WeChat"]                 → $ws7
 assign [class="mpv"]                    → $ws8
 assign [class="vlc"]                    → $ws8
 assign [class="netease-cloud-music"]    → $ws8
@@ -298,17 +302,18 @@ gaps outer 0
 
 # 开机启动项
 # 设置自动锁屏（用处不大）
-exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
+#exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock_0.png"
 # 启动电源管理
 exec --no-startup-id xfce4-power-manager
 # 设置背景
 exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
 # 启动网络管理
 exec --no-startup-id nm-applet
-# 启动音频服务
-exec --no-startup-id pulseaudio --start
 # 启动透明度
 exec --no-startup-id xcompmgr
 # 启动中文输入法
 exec --no-startup-id ibus-deamon
-
+# 关闭警报音
+exec --no-startup-id rmmod pcspkr
+# 启动utools
+exec --no-startup-id utools

@@ -83,6 +83,7 @@ yay -S ibus-qt
 |      √       | deepin-system-monitor |  任务管理器  | 深度的东西还是挺漂亮的 |
 |      ×       | networkmanager_dmenu  |   wifi管理   |       能记住密码       |
 |      √       |         rofi          |  应用运行器  |          很棒          |
+|      √       |        utools         |  应用运行器  |  很多附带功能，挺好用   |
 |      √       |       alacritty       |     终端     | 我在配置文件里写的这个 |
 |      √       |     wqy-microhei      |   中文字体   |                        |
 
