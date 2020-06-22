@@ -108,7 +108,7 @@ bindsym $mod+plus scratchpad show
 
 # 移动选中的浮动窗口（并没有什么用，完全可以使用$mod+鼠标拖动完成）
 # 移动选中的浮动窗口到中心位置
-# bindsym $mod+Shift+y move absolute position center
+bindsym $mod+Shift+y move absolute position center
 # 移动选中的浮动窗口到
 # bindsym $mod+Shift+m move position mouse
 
@@ -207,9 +207,10 @@ mode "  " {
     bindsym $mod+r mode "default"
 }
 
-exec --no-startup-id xrandr --output eDP1 --primary --mode 1600x900
+# 设置显示器分辨率（请根据实际情况修改名称和分辨率）
+exec --no-startup-id xrandr --output eDP --primary --mode 1680x1050
 # 调整双屏幕显示(用命令"xrandr"可查看显示器名称)
-bindsym $mod+Shift+p exec --no-startup-id "xrandr --output HDMI2 --auto --left-of eDP1"
+bindsym $mod+Shift+p exec --no-startup-id "xrandr --output HDMI2 --auto --left-of eDP"
 # 将焦点所在工作区移至(左/右)侧显示器
 bindsym $mod+p move workspace to output left
 

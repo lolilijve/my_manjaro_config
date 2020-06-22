@@ -13,3 +13,4 @@ curl -L https://get.oh-my.fish | fish
 
 
 
+echo "请选择修改 ~/.config/i3/config 中的分辨率设置！"
