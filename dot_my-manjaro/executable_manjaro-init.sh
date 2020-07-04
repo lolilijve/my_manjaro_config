@@ -24,9 +24,6 @@ pacman -S docker
 pacman -S alacritty
 # 安装 py3status -- i3status拓展
 pacman -S py3status
-# 安装 utools
-# （打开应用，搜索文件，音乐播放，内网穿透，文档查看等）
-yay -S utools
 # 安装 rofi
 pacman -S rofi
 # 安装 pcmanfm -- 文件管理器
@@ -47,9 +44,15 @@ pacman -S dbeaver
 pacman -S uget
 # 安装 ibus -- 中文输入法
 pacman -S ibus-rime
-yay -S ibus-qt
 # 安装 wqy-microhei -- 中文字体
 pacman -S wqy-microhei
+# 安装 pavucontrol -- 音频控制器
+pacman -S pavucontrol
+# 安装 ibus-qt -- ibus配置页面
+sudo yay -S ibus-qt
+# 安装 utools
+# （打开应用，搜索文件，音乐播放，内网穿透，文档查看等）
+sudo yay -S utools
 echo "执行qtconfig-qt4，在 Interface -> Default Input Method，把默认的输入法引擎由 xim 更改为 ibus"
 
 #清理垃圾
@@ -65,3 +68,4 @@ pacman -Scc
 # remmina 远程桌面客户端
 # Timeshift 备份工具
 # redis-desktop-manager Redis可视化工具
+# deepin-wine-wechat 微信
