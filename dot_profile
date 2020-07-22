@@ -1,1 +1,1 @@
-export EDITOR=/usr/bin/alacritty
+export EDITOR=/usr/bin/nvim

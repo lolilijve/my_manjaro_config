@@ -16,8 +16,8 @@ pacman -S intellij-idea-community-edition
 pacman -S chromium
 # 安装 jdk(idea自带，先不装)
 # pacman -S jdk-openjdk
-# 安装 vim -- 文本编辑器
-pacman -S vim
+# 安装 neovim -- 文本编辑器
+pacman -S neovim
 # 安装 docker -- 容器
 pacman -S docker
 # 安装 alacritty -- 终端
@@ -48,6 +48,12 @@ pacman -S ibus-rime
 pacman -S wqy-microhei
 # 安装 pavucontrol -- 音频控制器
 pacman -S pavucontrol
+# 安装 v2ray -- 梯子
+pacman -S v2ray
+# 安装 proxychains -- 转发
+pacman -S proxychains-ng
+# 安装 visualvm -- java分析工具
+pacman -S visualvm
 # 安装 ibus-qt -- ibus配置页面
 sudo yay -S ibus-qt
 # 安装 utools

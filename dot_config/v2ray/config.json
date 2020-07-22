@@ -35,13 +35,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "tr6.free9999.net",
-            "port": 443,
+"address":"tr2.free9999.net",
+"port":443,
             "users": [
               {
-                "id": "f365edab-67e3-40ab-ac33-ed1d7a0d81ce",
-                "alterId": 16,
-                "email": "t@t.tt",
+"id":"ce738430-8bad-47b8-939b-436cb7493162",
+"alterId":16,
+		"email": "t@t.tt",
                 "security": "auto"
               }
             ]

@@ -168,7 +168,7 @@ bindsym $mod+Shift+s restart
 
 # 锁屏
 mode "i3lock: Return to lock/Escape to Cancel" {
-    bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock.png"
+    bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock_1.jpg"
     bindsym Escape mode "default"
 }
 bindsym $mod+mod1+l mode "i3lock: Return to lock/Escape to Cancel"
@@ -242,6 +242,7 @@ assign [class="dolphin"]                → $ws4
 assign [class="Pcmanfm"]                → $ws4
 assign [class="Typora"]                 → $ws5
 assign [class="Code"]                   → $ws5
+assign [class="VNote"]                  → $ws5
 assign [class="DBeaver"]                → $ws6
 assign [class="MySQL Workbench"]    	→ $ws6
 assign [class="mycli"]                  → $ws6
@@ -306,7 +307,7 @@ gaps outer 0
 
 # 开机启动项
 # 设置自动锁屏（用处不大）
-#exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock_0.png"
+#exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock_0.jpg"
 # 启动电源管理
 exec --no-startup-id xfce4-power-manager
 # 设置背景
