@@ -21,7 +21,7 @@ def get_proxy_datas():
     soup = BeautifulSoup(content,'lxml')
     params = soup.find_all('p')
     # ports = soup.find_all('p',attrs={'data-title':'PORT'})
-    print('开始写入代理IP和端口......')
+    print('开始写入代理配置......')
     i = 1
     flist = read_config()
     for param in params:
@@ -39,7 +39,7 @@ def get_proxy_datas():
 		# write_conf(param)
                 i=i+1
     write_config(flist)
-    print("代理ID和端口写入完成，将退出......")
+    print("代理配置写入完成，将退出......")
 
 # 正则处理文本
 def regular_deal(pStr):

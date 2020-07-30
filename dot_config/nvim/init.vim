@@ -4,33 +4,15 @@
 "| |  | | | |   | |\  | \ V /  | || |  | |  _ <| |___
 "|_|  |_| |_|   |_| \_|  \_/  |___|_|  |_|_| \_\\____|
 
-" Author: @theniceboy
-
-" Checkout-list
-" vim-esearch
-" fmoralesc/worldslice
-" SidOfc/mkdx
-
 
 " ===
-" === Auto load for first time uses
+" === 初次使用自动加载
 " ===
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
-
-" ===
-" === Create a _machine_specific.vim file to adjust machine specific stuff, like python interpreter location
-" ===
-let has_machine_specific_file = 1
-if empty(glob('~/.config/nvim/_machine_specific.vim'))
-	let has_machine_specific_file = 0
-	silent! exec "!cp ~/.config/nvim/default_configs/_machine_specific_default.vim ~/.config/nvim/_machine_specific.vim"
-endif
-source $XDG_CONFIG_HOME/nvim/_machine_specific.vim
 
 
 " ====================
@@ -84,11 +66,11 @@ set visualbell
 silent !mkdir -p ~/.config/nvim/tmp/backup
 silent !mkdir -p ~/.config/nvim/tmp/undo
 "silent !mkdir -p ~/.config/nvim/tmp/sessions
-set backupdir = ~/.config/nvim/tmp/backup,.
-set directory = ~/.config/nvim/tmp/backup,.
+set backupdir =~/.config/nvim/tmp/backup,.
+set directory =~/.config/nvim/tmp/backup,.
 if has('persistent_undo')
 	set undofile
-	set undodir = ~/.config/nvim/tmp/undo,.
+	set undodir =~/.config/nvim/tmp/undo,.
 endif
 set colorcolumn=100
 set updatetime=1000
@@ -130,7 +112,7 @@ let mapleader="\<space>"
 " Save & quit
 noremap Q :q<CR>
 noremap <C-q> :qa<CR>
-noremap S :w<CR>
+noremap <C-s> :w<CR>
 
 " Open the vimrc file anytime
 noremap <LEADER>rc :e ~/.config/nvim/init.vim<CR>
@@ -193,7 +175,7 @@ noremap <C-Y> 5<C-y>
 noremap <C-E> 5<C-e>
 
 
-source $XDG_CONFIG_HOME/nvim/cursor.vim
+source ~/.config/nvim/cursor.vim
 
 " ===
 " === Insert Mode Cursor Movement
@@ -276,7 +258,7 @@ noremap tm. :+tabmove<CR>
 " === Markdown Settings
 " ===
 " Snippets
-source $XDG_CONFIG_HOME/nvim/md-snippets.vim
+source ~/.config/nvim/md-snippets.vim
 " auto spell
 autocmd BufRead,BufNewFile *.md setlocal spell
 
@@ -371,49 +353,69 @@ endfunc
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Pretty Dress
-Plug 'bling/vim-bufferline'
-Plug 'theniceboy/vim-deus'
+" 自动补全&Language server
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Status line
-Plug 'theniceboy/eleline.vim'
+" 按键绑定
+Plug 'liuchengxu/vim-which-key'
+
+" 模糊查找器
+"Plug 'Yggdroot/LeaderF',{'do':'./install.sh'}
+Plug 'junegunn/fzf.vim'
+
+" git命令集成
+Plug 'tpope/vim-fugitive'
+
+" 格式排版
+Plug 'sbdchd/neoformat'
+
+" 语法检查
+Plug 'neomake/neomake'
+
+" 树状文件浏览&文件管理器
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
+
+" 状态栏
+Plug 'vim-airline/vim-airline'
+
+" 快速定位
+Plug 'easymotion/vim-easymotion'
+
+" ranger
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+" 命令行显示缓冲区列表
+Plug 'bling/vim-bufferline'
+
+" 暗黑主题
+Plug 'dracula/vim',{'as':'dracula'}
+
+" 可视化撤消历史记录
+Plug 'mbbill/undotree'
 
 " General Highlighter
-Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'RRethy/vim-illuminate'
+" Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" Plug 'RRethy/vim-illuminate'
 
 " File navigation
-"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'junegunn/fzf.vim'
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-Plug 'airblade/vim-rooter'
-Plug 'pechorin/any-jump.vim'
+" Plug 'airblade/vim-rooter'
+" Plug 'pechorin/any-jump.vim'
 
 " Taglist
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 
 " Debugger
 " Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go'}
 
-" Auto Complete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'wellle/tmux-complete.vim'
-
-" Snippets
-" Plug 'SirVer/ultisnips'
-Plug 'theniceboy/vim-snippets'
-
-" Undo Tree
-Plug 'mbbill/undotree'
+" 代码片段
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Git
 Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
-
-" Autoformat
-Plug 'Chiel92/vim-autoformat'
 
 " Tex
 Plug 'lervag/vimtex'
@@ -424,9 +426,7 @@ Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim depend
 
 " HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
 Plug 'elzr/vim-json'
-Plug 'othree/html5.vim'
 Plug 'alvan/vim-closetag'
-Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
 Plug 'HerringtonDarkholme/yats.vim'
 
 " Go
@@ -459,7 +459,6 @@ Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or 
 Plug 'junegunn/vim-after-object' " da= to delete what's after =
 Plug 'godlygeek/tabular' " ga, or :Tabularize <regex> to align
 Plug 'tpope/vim-capslock'	" Ctrl+L (insert) to toggle capslock
-Plug 'easymotion/vim-easymotion'
 Plug 'svermeulen/vim-subversive'
 Plug 'theniceboy/argtextobj.vim'
 Plug 'rhysd/clever-f.vim'
@@ -516,9 +515,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "let g:oceanic_next_terminal_italic = 1
 "let g:one_allow_italics = 1
 
-"color dracula
+color dracula
 "color one
-color deus
+"color deus
 "color gruvbox
 "let ayucolor="light"
 "color ayu
@@ -1255,7 +1254,7 @@ noremap <c-y> :NR<CR>
 " ===
 " === any-jump
 " ===
-nnoremap j :AnyJump<CR>
+nnoremap <C-;> :AnyJump<CR>
 let g:any_jump_window_width_ratio  = 0.8
 let g:any_jump_window_height_ratio = 0.9
 
@@ -1275,7 +1274,7 @@ exec "nohlsearch"
 
 
 " Open the _machine_specific.vim file if it has just been created
-if has_machine_specific_file == 0
-	exec "e ~/.config/nvim/_machine_specific.vim"
-endif
+"if has_machine_specific_file == 0
+"	exec "e ~/.config/nvim/_machine_specific.vim"
+"endif
 

@@ -30,8 +30,8 @@ pacman -S rofi
 pacman -S pcmanfm
 # 安装 ranger -- 命令行文件管理器
 pacman -S ranger
-# 安装 deepin-system-monitor 系统监视器
-pacman -S deepin-system-monitor
+# 安装 htop 系统监视器
+pacman -S htop
 # 安装 feh -- 用于设置壁纸
 pacman -S feh
 # 安装 xcompmgr -- 用于设置透明度
@@ -54,6 +54,8 @@ pacman -S v2ray
 pacman -S proxychains-ng
 # 安装 visualvm -- java分析工具
 pacman -S visualvm
+# 安装 npm
+pacman -S npm
 # 安装 ibus-qt -- ibus配置页面
 sudo yay -S ibus-qt
 # 安装 utools

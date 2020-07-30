@@ -5,6 +5,9 @@ chezmoi diff
 # 安装 oh-my-fish -- Fishshell 框架
 curl -L https://get.oh-my.fish | fish
 
+# npm 设置淘宝镜像
+npm config set registry https://registry.npm.taobao.org
+
 # 配置 chromium -- http://googlehelper.net/（下载插件并安装如浏览器，同步即可）
 
 # 配置 idea -- （idea导入 ~/.my-manjaro/idea-settings/settings.zip）
