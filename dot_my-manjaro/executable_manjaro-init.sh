@@ -56,8 +56,6 @@ pacman -S proxychains-ng
 pacman -S visualvm
 # 安装 npm
 pacman -S npm
-# 安装 ibus-qt -- ibus配置页面
-sudo yay -S ibus-qt
 # 安装 utools
 # （打开应用，搜索文件，音乐播放，内网穿透，文档查看等）
 sudo yay -S utools

@@ -168,7 +168,7 @@ bindsym $mod+Shift+s restart
 
 # 锁屏
 mode "i3lock: Return to lock/Escape to Cancel" {
-    bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock_1.jpg"
+    bindsym Return mode "default" exec "i3lock -I 600 -i ~/.wallpapers/lock/lock_0.jpg"
     bindsym Escape mode "default"
 }
 bindsym $mod+mod1+l mode "i3lock: Return to lock/Escape to Cancel"

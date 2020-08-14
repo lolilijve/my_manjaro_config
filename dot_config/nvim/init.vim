@@ -15,34 +15,43 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 
-" ====================
-" === Editor Setup ===
-" ====================
+" ==================
+" === 编辑器设置 ===
+" ==================
 " ===
 " === System
 " ===
-"set clipboard=unnamedplus
 let &t_ut=''
 set autochdir
 
 
 " ===
-" === Editor behavior
+" === 编辑器行为设置
 " ===
+" 显示行号
 set number
+" 从选中行向两边计数的方式
 set relativenumber
+" 突出显示选中行
 set cursorline
+" noexpandtab: 键入tab使用\t表示; expandtab: 键入tab使用空格表示
 set noexpandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" tab使用几个空格
+set tabstop=4
+" 使用>> << == 缩进代码时使用空格数
+set shiftwidth=4
+" 大于tabstop的部分会使用空格（根本不需要嘛）
+set softtabstop=0
+" 自动缩进
 set autoindent
+" 
 set list
 set listchars=tab:\|\ ,trail:▫
 set scrolloff=4
 set ttimeoutlen=0
 set notimeout
 set viewoptions=cursor,folds,slash,unix
+" 自动换行
 set wrap
 set tw=0
 set indentexpr=
@@ -50,12 +59,18 @@ set foldmethod=indent
 set foldlevel=99
 set foldenable
 set formatoptions-=tc
+" 分屏时光标在右
 set splitright
+" 分屏时光标在下
 set splitbelow
 set noshowmode
+" 显示输入的命令
 set showcmd
+" 末行模式输入提示
 set wildmenu
+" 搜索忽略大小写
 set ignorecase
+" 智能大小写
 set smartcase
 set shortmess+=c
 set inccommand=split
@@ -65,7 +80,6 @@ set lazyredraw "same as above
 set visualbell
 silent !mkdir -p ~/.config/nvim/tmp/backup
 silent !mkdir -p ~/.config/nvim/tmp/undo
-"silent !mkdir -p ~/.config/nvim/tmp/sessions
 set backupdir =~/.config/nvim/tmp/backup,.
 set directory =~/.config/nvim/tmp/backup,.
 if has('persistent_undo')
@@ -79,6 +93,9 @@ set virtualedit=block
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
+" ==================
+" === 快捷键设置 ===
+" ==================
 " ===
 " === Terminal Behaviors
 " ===
@@ -106,7 +123,7 @@ let g:terminal_color_14 = '#9AEDFE'
 " ===
 " === Basic Mappings
 " ===
-" Set <LEADER> as <SPACE>,
+" 设置空格键作为 <LEADER> 
 let mapleader="\<space>"
 
 " Save & quit
@@ -417,9 +434,6 @@ Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 
-" Tex
-Plug 'lervag/vimtex'
-
 " CSharp
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim dependency
@@ -434,7 +448,7 @@ Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
+" Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
 Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
 
 " Flutter
@@ -1270,6 +1284,7 @@ let g:typescript_ignore_browserwords = 1
 " ===
 " === Necessary Commands to Execute
 " ===
+" 加载新的vim时，防止显示上一次的搜索高亮
 exec "nohlsearch"
 
 
