@@ -11,6 +11,8 @@ pacman -S fish
 pacman -S git
 # 安装 idea -- 钟爱的开发工具
 pacman -S intellij-idea-community-edition
+# 安装 pycharm -- python ide
+pacman -S pycharm-community-edition
 # 安装 chromium -- 浏览器
 # （网站收藏，笔记，VPN，接口测试等）
 pacman -S chromium
