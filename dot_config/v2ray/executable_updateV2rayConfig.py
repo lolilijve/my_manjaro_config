@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import json
+from os import mknod
 import requests
 import os
 import re
 import sys
 import base64
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 url = "https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7"
 url1 = "https://github.com/iwxf/free-v2ray"
@@ -122,16 +124,22 @@ def regular_deal(s, pStr):
 
 # 读取配置
 def read_config():
-    with open(os.path.expanduser('~') + '/.config/v2ray/config.json',
-              'r') as load_f:
+    config_file_path = os.path.expanduser('~') + '/.config/v2ray/config-temp.json'
+    my_file = Path(config_file_path)
+    if my_file.is_file() == False:
+        os.mknod(config_file_path)
+    with open(config_file_path, 'r') as load_f:
         load_dict = json.load(load_f)
     return load_dict
 
 
 # 写入配置
 def write_config(new_dict):
-    with open(os.path.expanduser('~') + '/.config/v2ray/config.json',
-              'w') as f:
+    config_file_path = os.path.expanduser('~') + '/.config/v2ray/config.json'
+    my_file = Path(config_file_path)
+    if my_file.is_file() == False:
+        os.mknod(config_file_path)
+    with open(config_file_path, 'w') as f:
         json.dump(new_dict, f)
 
 

@@ -64,7 +64,7 @@ sudo yay -S utools
 echo "执行qtconfig-qt4，在 Interface -> Default Input Method，把默认的输入法引擎由 xim 更改为 ibus"
 
 #清理垃圾
-pacman -R $(pacman -Qdtq)
+pacman -Rns $(pacman -Qdtq)
 pacman -Scc
 
 # 另：数据库，redis等请安装 在docker中
