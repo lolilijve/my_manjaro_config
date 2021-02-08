@@ -12,7 +12,7 @@ pacman -S git
 # 安装 idea -- 钟爱的开发工具
 pacman -S intellij-idea-community-edition
 # 安装 pycharm -- python ide
-pacman -S pycharm-community-edition
+#pacman -S pycharm-community-edition
 # 安装 chromium -- 浏览器
 # （网站收藏，笔记，VPN，接口测试等）
 pacman -S chromium
@@ -53,7 +53,7 @@ pacman -S pavucontrol
 # 安装 v2ray -- 梯子
 pacman -S v2ray
 # 安装 proxychains -- 转发
-pacman -S proxychains-ng
+#pacman -S proxychains-ng
 # 安装 visualvm -- java分析工具
 pacman -S visualvm
 # 安装 npm
