@@ -25,7 +25,7 @@ pacman -S docker
 # 安装 alacritty -- 终端
 pacman -S alacritty
 # 安装 py3status -- i3status拓展
-pacman -S py3status
+#pacman -S py3status
 # 安装 rofi
 pacman -S rofi
 # 安装 pcmanfm -- 文件管理器
@@ -47,9 +47,9 @@ pacman -S uget
 # 安装 ibus -- 中文输入法
 pacman -S ibus-rime
 # 安装 wqy-microhei -- 中文字体
-pacman -S wqy-microhei
+pacman -S wqy-microhei opendesktop-fonts
 # 安装 pavucontrol -- 音频控制器
-pacman -S pavucontrol
+#pacman -S pavucontrol
 # 安装 v2ray -- 梯子
 pacman -S v2ray
 # 安装 proxychains -- 转发
