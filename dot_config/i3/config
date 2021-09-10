@@ -234,6 +234,7 @@ assign [class="urxvt"]                  → $ws1
 assign [class="idea"]                   → $ws2
 assign [class="pycharm"]                → $ws2
 assign [class="Chromium"]               → $ws3
+assign [class="edge-beta"]		→ $ws3
 assign [class="Firefox"]                → $ws3
 assign [class="Chrome"]                 → $ws3
 assign [class="dolphin"]                → $ws4
@@ -281,7 +282,9 @@ gaps outer 0
 # 设置自动锁屏（用处不大）
 #exec --no-startup-id xautolock -time 10 -locker "i3lock -I 600 -i ~/.wallpapers/lock/lock_0.jpg"
 # 启动电源管理
-exec --no-startup-id xfce4-power-manager
+exec --no-startup-id mate-power-manager
+# 启动音量控制
+exec --no-startup-id volumeicon
 # 设置背景
 exec --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper_1.jpg
 # 启动网络管理

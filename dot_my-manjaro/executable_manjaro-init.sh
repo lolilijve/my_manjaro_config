@@ -11,21 +11,12 @@ pacman -S fish
 pacman -S git
 # 安装 idea -- 钟爱的开发工具
 pacman -S intellij-idea-community-edition
-# 安装 pycharm -- python ide
-#pacman -S pycharm-community-edition
-# 安装 chromium -- 浏览器
-# （网站收藏，笔记，VPN，接口测试等）
-pacman -S chromium
-# 安装 jdk(idea自带，先不装)
-# pacman -S jdk-openjdk
 # 安装 neovim -- 文本编辑器
 pacman -S neovim
 # 安装 docker -- 容器
 pacman -S docker
 # 安装 alacritty -- 终端
 pacman -S alacritty
-# 安装 py3status -- i3status拓展
-#pacman -S py3status
 # 安装 rofi
 pacman -S rofi
 # 安装 pcmanfm -- 文件管理器
@@ -48,19 +39,22 @@ pacman -S uget
 pacman -S ibus-rime
 # 安装 wqy-microhei -- 中文字体
 pacman -S wqy-microhei opendesktop-fonts
-# 安装 pavucontrol -- 音频控制器
-#pacman -S pavucontrol
+# 安装 ttf-jetbrains-mono -- 编程字体
+pacman -S ttf-jetbrains-mono
 # 安装 v2ray -- 梯子
 pacman -S v2ray
-# 安装 proxychains -- 转发
-#pacman -S proxychains-ng
 # 安装 visualvm -- java分析工具
 pacman -S visualvm
 # 安装 npm
 pacman -S npm
-# 安装 utools
-# （打开应用，搜索文件，音乐播放，内网穿透，文档查看等）
+# 安装 volumeicon
+pacman -S volumeicon
+# 安装 mate-power-manager (电源管理)
+pacman -S mate-power-manager
+# 安装 utools （打开应用，搜索文件，音乐播放，内网穿透，文档查看等）
 sudo yay -S utools
+# 安装 edge -- 浏览器 (因为chromium不能再同步了,我很生气1)
+sudo yay -S microsoft-edge-beta-bin
 echo "执行qtconfig-qt4，在 Interface -> Default Input Method，把默认的输入法引擎由 xim 更改为 ibus"
 
 #清理垃圾
@@ -76,4 +70,3 @@ pacman -Scc
 # remmina 远程桌面客户端
 # Timeshift 备份工具
 # redis-desktop-manager Redis可视化工具
-# deepin-wine-wechat 微信
